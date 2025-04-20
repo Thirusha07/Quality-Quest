@@ -1,0 +1,31 @@
+.tabs {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
+  
+  .tabsList {
+    display: flex;
+    border-bottom: 1px solid #e0e0e0;
+  }
+  
+  .tabsTrigger {
+    padding: 10px 20px;
+    cursor: pointer;
+    border: none;
+    background: none;
+    font-size: 1rem;
+    color: #666666;
+    transition: color 0.3s ease;
+  }
+  
+  .tabsTrigger.active {
+    color: #007bff;
+    border-bottom: 2px solid #007bff;
+  }
+  
+  .tabsContent {
+    padding: 20px;
+    border-top: 1px solid #e0e0e0;
+  }
+  

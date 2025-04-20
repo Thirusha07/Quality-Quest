@@ -1,0 +1,272 @@
+/* dashboard.module.css */
+
+.container {
+    min-height: 100vh;
+    background-color: #ebf5ff;
+    padding: 1.5rem;
+  }
+  
+.title {
+font-size: 1.875rem;
+font-weight: 700;
+color: #1e3a8a;
+margin-bottom: 1.5rem;
+}
+
+.projectGrid {
+display: grid;
+grid-template-columns: 1fr;
+gap: 1rem;
+margin-bottom: 2rem;
+}
+
+.projectCard {
+cursor: pointer;
+border: 2px solid transparent;
+transition: all 0.2s ease-in-out;
+}
+
+.selectedProject {
+border-color: #2563eb;
+}
+
+.projectTitle {
+color: #1e40af;
+}
+
+.environmentLabel {
+font-size: 0.875rem;
+color: #4b5563;
+}
+
+.environmentList {
+list-style-type: disc;
+padding-left: 1.5rem;
+}
+
+.tabs {
+margin-top: 1rem;
+}
+
+.tabsList {
+background-color: #dbeafe;
+border-radius: 0.375rem;
+display: flex;
+}
+
+.tabsTrigger {
+padding: 0.75rem 1rem;
+display: flex;
+align-items: center;
+cursor: pointer;
+border: none;
+background: transparent;
+color: #4b5563;
+font-weight: 500;
+outline: none;
+transition: color 0.2s ease-in-out;
+}
+
+.tabsTrigger[data-state="active"] {
+color: #1e40af;
+border-bottom: 2px solid #2563eb;
+}
+  
+.tabIcon {
+    margin-right: 0.25rem;
+  }
+  
+.tabsContent {
+    padding-top: 1rem;
+  }
+  
+.tabContentContainer {
+    margin-top: 1rem;
+  }
+  
+.taskCard {
+    margin-bottom: 1rem;
+    background-color: white;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  }
+  
+.card {
+    margin-bottom: 1rem;
+  }
+  
+.bugItem {
+    border: 1px solid #e5e7eb;
+    padding: 0.5rem;
+    margin-bottom: 0.5rem;
+    border-radius: 0.25rem;
+    background-color: #dbeafe;
+  }
+  
+.bugTitle {
+    font-weight: 600;
+  }
+  
+.bugMeta {
+    font-size: 0.875rem;
+    color: #4b5563;
+  }
+  
+.addButton {
+    margin-top: 0.5rem;
+    background-color: #2563eb;
+    color: white;
+    padding: 0.5rem 1rem;
+    border-radius: 0.25rem;
+    border: none;
+    cursor: pointer;
+    font-weight: 500;
+  }
+  
+.addButton:hover {
+    background-color: #1d4ed8;
+  }
+  
+.uploadButton {
+    margin-top: 0.5rem;
+    border: 1px solid #d1d5db;
+    padding: 0.5rem 1rem;
+    border-radius: 0.25rem;
+    background-color: white;
+    cursor: pointer;
+  }
+  
+.addBugButton {
+    background-color: transparent;
+    color: #2563eb;
+    padding: 0.5rem;
+    border: none;
+    cursor: pointer;
+    font-weight: 500;
+  }
+  
+.memberGrid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+    margin-top: 1rem;
+  }
+  
+.memberList {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+/* Media query for responsive layout */
+@media (min-width: 768px) {
+.projectGrid {
+    grid-template-columns: repeat(3, 1fr);
+}
+}
+
+/* Additional styles for dialog - add to dashboard.module.css */
+
+.dialogOverlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+
+.dialogContent {
+  background-color: white;
+  border-radius: 8px;
+  padding: 2rem;
+  width: 90%;
+  max-width: 600px;
+  max-height: 85vh;
+  overflow-y: auto;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+}
+
+.dialogTitle {
+  margin-bottom: 1.5rem;
+  font-size: 1.5rem;
+  color: #333;
+}
+
+.dialogForm {
+  display: flex;
+  flex-direction: column;
+}
+
+.dialogButtons {
+  display: flex;
+  justify-content: flex-end;
+  gap: 1rem;
+  margin-top: 1.5rem;
+}
+
+/* Form elements */
+.input, .select {
+  padding: 0.75rem;
+  margin-bottom: 1.5rem;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 1rem;
+}
+
+.input:focus, .select:focus {
+  outline: none;
+  border-color: #4a90e2;
+  box-shadow: 0 0 0 2px rgba(74, 144, 226, 0.2);
+}
+
+.label {
+  margin-bottom: 0.5rem;
+  font-weight: 500;
+  color: #555;
+}
+
+.userList {
+  margin-bottom: 1.5rem;
+  padding: 1rem;
+  border: 1px solid #eee;
+  border-radius: 4px;
+  background-color: #f9f9f9;
+}
+
+.userItem {
+  display: flex;
+  align-items: center;
+  margin-bottom: 0.5rem;
+  padding: 0.5rem;
+  color:Black;
+}
+
+.submitButton, .cancelButton {
+  padding: 0.75rem 1.5rem;
+  border: none;
+  border-radius: 4px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.submitButton {
+  background-color: #4a90e2;
+  color: white;
+}
+
+.submitButton:hover {
+  background-color: #3a80d2;
+}
+
+.cancelButton {
+  background-color: #f0f0f0;
+  color: #333;
+}
+
+.cancelButton:hover {
+  background-color: #e0e0e0;
+}
